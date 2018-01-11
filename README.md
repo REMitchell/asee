@@ -1,14 +1,19 @@
 # asee
 
+<h3>Environment and Installation</h3>
 This was written for Python 3.6 and not tested with other Python versions
 
 Install two Python libraries:
-- BeautifulSoup (pip install bs4)
-- Requests (pip install requests)
+- BeautifulSoup (```$ pip install bs4```)
+- Requests (```$ pip install requests```)
+Note: Note, if running both Python 2.x and Python 3.x, you may need to do ```$ pip3 install bs4``` or whatever.
 
+<h3>Running</h3>
 To run, modify the search term (currently 'culture') passed to the <code>startSearch</code> function on the last line of the script. 
 
 ```$ python crawler.py```
+
+Note: you may need to do ```$ python3 crawler.py```
 
 This will search for your search term and start printing out the title and abstract of all found articles to the terminal. 
 
@@ -50,7 +55,7 @@ discomfort with differences. The author also added four of the Pittsburgh Freshm
 Attitudes Survey (PFEAS) questions and eight self-created questions to the survey, in addition to
 ```
 
-Areas for improvement:
+<h3>Areas for improvement</h3>
 - Collecting additional information about the articles, such as authors and citations
 - Removing the "Abstract" title, and potentially "notes" subtitle from abstract text
 - Better exception handling. No exceptions were encountered during test run, but you may experience a timeout, bad HTTP code, or oddly formatted link/article page that breaks things. In this case, you may want to ignore the faulty article (log it?) and continue searching.
