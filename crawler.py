@@ -25,11 +25,13 @@ class ASEEcrawler:
 	def parseArticle(self, articlePage):
 		title = self.safeGet(articlePage, 'h2')
 		abstract = self.safeGet(articlePage, 'div#abstract')
+		pdfLink = articlePage.select('a.download_link')[0].attrs['href']
 		print('\n---------------------------------')
 		print("\nTITLE IS:")
 		print(title)
 		print("ABSTRACT IS:")
 		print(abstract)
+		print("\nPDF LINK: https://peer.asee.org/"+pdfLink)
 
 	def getArticles(self, articleLinks):
 		for articleLink in articleLinks:
