@@ -60,3 +60,5 @@ Attitudes Survey (PFEAS) questions and eight self-created questions to the surve
 - Collecting additional information about the articles, such as authors and citations
 - Removing the "Abstract" title, and potentially "notes" subtitle from abstract text
 - Better exception handling. No exceptions were encountered during test run, but you may experience a timeout, bad HTTP code, or oddly formatted link/article page that breaks things. In this case, you may want to ignore the faulty article (log it?) and continue searching.
+- Currently fetches just the first 10 pages of search results. Remove the lines referencing the variable ```i``` and the ```break ``` line to get rid of this limit. Will stop automatically when no more results are found
+
